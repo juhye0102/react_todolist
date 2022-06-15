@@ -9,15 +9,19 @@ const Input = ({ todolist, setTodolist, text, setText }) => {
 
   const valueAddHandle = (e) => {
     setText(e.target.value);
+    if (e.key === "Enter") {
+      Input();
+    }
   };
 
   return (
     <InputWrapper>
       <InputBox
         value={text}
-        placeholder="할 일을 등록하세요"
+        placeholder="할 일을 작성하세요"
         onChange={(e) => valueAddHandle(e)}
       />
+      <Input value="valueAddHandle={valueAddHandle}" />
       <AddButton onClick={listAddHandle}>등록</AddButton>
     </InputWrapper>
   );
