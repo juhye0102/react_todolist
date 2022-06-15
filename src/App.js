@@ -12,7 +12,7 @@ function App() {
   // 컴포넌트 생명을 관리하는 역할
   useEffect(() => {
     console.log(todolist);
-  }, [todolist]); // 언제 바꿀건지?! todolsit의 값이 변했을때 console 찍어라~
+  }, [todolist]); // 언제 바꿀건지?! todolist의 값이 변했을때 console 찍어라~
 
   return (
     <>
