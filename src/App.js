@@ -31,8 +31,8 @@ function App() {
 }
 
 const TodolistWrapper = styled.section`
-  width: 500px;
-  height: 700px;
+  width: 450px;
+  height: 600px;
   background-color: #f4f4f4;
   margin: 0 auto;
   display: flex;
