@@ -9,9 +9,6 @@ const Input = ({ todolist, setTodolist, text, setText }) => {
 
   const valueAddHandle = (e) => {
     setText(e.target.value);
-    if (e.key === "Enter") {
-      Input();
-    }
   };
 
   return (
@@ -20,6 +17,11 @@ const Input = ({ todolist, setTodolist, text, setText }) => {
         value={text}
         placeholder="할 일을 작성하세요"
         onChange={(e) => valueAddHandle(e)}
+        onKeyPress={(e) => {
+          if (e.key === "Enter") {
+            listAddHandle();
+          }
+        }}
       />
       <Input value="valueAddHandle={valueAddHandle}" />
       <AddButton onClick={listAddHandle}>등록</AddButton>
@@ -39,6 +41,9 @@ const InputBox = styled.input`
   border: none;
 `;
 
-const AddButton = styled.button``;
+const AddButton = styled.button`
+  width: 5%;
+  height: 4%;
+`;
 
 export default Input;
