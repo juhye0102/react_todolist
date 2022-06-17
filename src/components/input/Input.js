@@ -11,19 +11,19 @@ const Input = ({ todolist, setTodolist, text, setText }) => {
     setText(e.target.value);
   };
 
+  const valueAddEnter = (e) => {
+    if (e.key === "Enter") {
+      listAddHandle();
+    }
+  };
   return (
     <InputWrapper>
       <InputBox
         value={text}
         placeholder="할 일을 작성하세요"
         onChange={(e) => valueAddHandle(e)}
-        onKeyPress={(e) => {
-          if (e.key === "Enter") {
-            listAddHandle();
-          }
-        }}
       />
-      <Input value="valueAddHandle={valueAddHandle}" />
+      <Input value="valueAddHandle={valueAddHandle} valueAddEnter={valueAddEnter}" />
       <AddButton onClick={listAddHandle}>등록</AddButton>
     </InputWrapper>
   );
