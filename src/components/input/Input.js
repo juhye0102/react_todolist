@@ -13,7 +13,7 @@ const Input = ({ todolist, setTodolist, text, setText }) => {
 
   const valueAddEnter = (e) => {
     if (e.key === "Enter") {
-      listAddHandle();
+      valueAddHandle();
     }
   };
   return (
