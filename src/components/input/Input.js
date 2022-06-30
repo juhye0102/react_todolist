@@ -44,6 +44,7 @@ const InputBox = styled.input`
 const AddButton = styled.button`
   width: 5%;
   height: 4%;
+  background-color: gray;
 `;
 
 export default Input;
